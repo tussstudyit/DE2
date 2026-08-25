@@ -1,0 +1,98 @@
+.game-root {
+    -fx-background-color: radial-gradient(center 50% 45%, radius 72%, #205f3d, #0f3527 72%, #09261e);
+    -fx-font-family: "Segoe UI", "Arial";
+}
+
+.table-area {
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+    -fx-background-radius: 26;
+    -fx-border-color: rgba(255, 255, 255, 0.16);
+    -fx-border-radius: 26;
+    -fx-border-width: 1;
+}
+
+.turn-message {
+    -fx-background-color: #f8d66d;
+    -fx-background-radius: 8;
+    -fx-padding: 8 18 8 18;
+    -fx-text-fill: #2e2a19;
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+}
+
+.match-status {
+    -fx-background-color: rgba(0, 0, 0, 0.24);
+    -fx-background-radius: 8;
+    -fx-padding: 10 14 10 14;
+    -fx-text-fill: #eaf6ef;
+    -fx-font-size: 14px;
+}
+
+.player-view {
+    -fx-background-color: rgba(5, 18, 14, 0.62);
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.16);
+    -fx-border-radius: 8;
+    -fx-padding: 12;
+}
+
+.player-avatar {
+    -fx-stroke: rgba(255, 255, 255, 0.5);
+    -fx-stroke-width: 2;
+}
+
+.player-name {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 800;
+}
+
+.player-card-count {
+    -fx-text-fill: #d3e6da;
+    -fx-font-size: 13px;
+}
+
+.player-status {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-radius: 8;
+    -fx-padding: 4 8 4 8;
+    -fx-text-fill: #f8d66d;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
+
+.hand-view {
+    -fx-padding: 2 8 2 8;
+}
+
+.card-view {
+    -fx-focus-traversable: false;
+}
+
+.game-button {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 11 22 11 22;
+    -fx-font-size: 14px;
+    -fx-font-weight: 800;
+    -fx-cursor: hand;
+}
+
+.primary-button {
+    -fx-background-color: #f8d66d;
+    -fx-text-fill: #1f2b20;
+}
+
+.primary-button:hover {
+    -fx-background-color: #ffe58a;
+}
+
+.secondary-button {
+    -fx-background-color: rgba(255, 255, 255, 0.14);
+    -fx-border-color: rgba(255, 255, 255, 0.32);
+    -fx-text-fill: white;
+}
+
+.secondary-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.22);
+}
