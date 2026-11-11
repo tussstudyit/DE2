@@ -1,8 +1,11 @@
 package com.example.tienlen.common.model;
 
 public enum PlayerStatus {
+    WAITING("Đang chờ"),
     PLAYING("Đang đánh"),
-    WAITING("Đang chờ");
+    PASSED("Đã bỏ lượt"),
+    FINISHED("Đã hết bài"),
+    WINNER("Về nhất");
 
     private final String displayName;
 

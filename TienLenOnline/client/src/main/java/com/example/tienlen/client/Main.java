@@ -1,29 +1,44 @@
 package com.example.tienlen.client;
 
-import com.example.tienlen.client.controller.GameController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    private static String initialPlayerName = null;
+
+    public static void setInitialPlayerName(String name) {
+        initialPlayerName = name;
+    }
+
     @Override
     public void start(Stage stage) {
         GameController controller = new GameController();
-        Scene scene = new Scene(controller.getView(), 1180, 760);
+        if (initialPlayerName != null && !initialPlayerName.isBlank()) {
+            controller.getLobbyView().setPlayerName(initialPlayerName);
+        }
 
-        var stylesheet = Main.class.getResource("/com/example/tienlen/client/styles/game.css");
+        Scene scene = new Scene(controller.getRoot(), 1180, 780);
+
+        var stylesheet = Main.class.getResource("/styles/game.css");
         if (stylesheet != null) {
             scene.getStylesheets().add(stylesheet.toExternalForm());
         }
 
-        stage.setTitle("Tiến Lên Online");
-        stage.setMinWidth(960);
-        stage.setMinHeight(650);
+        String titleSuffix = (initialPlayerName != null && !initialPlayerName.isBlank())
+                ? " [" + initialPlayerName + "]"
+                : "";
+        stage.setTitle("Tiến Lên Miền Nam Online - Java RMI" + titleSuffix);
+        stage.setMinWidth(980);
+        stage.setMinHeight(680);
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
+        if (args.length > 0 && (initialPlayerName == null || initialPlayerName.isBlank())) {
+            initialPlayerName = args[0];
+        }
         launch(args);
     }
 }
